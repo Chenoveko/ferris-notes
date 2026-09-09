@@ -81,7 +81,7 @@ Lifetimes of references is a complex topic cover later in the book
 - The reference (the original data) must outlive the reference  
 
 This function does not compile because `city` is dropped when the function ends
-```rust,noplayground
+```rust,ignore
 fn create_city() -> &String {
     let city: String = String::from("New York");
     &city // Return dangling reference

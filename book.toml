@@ -7,7 +7,7 @@ language = "en"
 text-direction = "ltr"
 
 [rust]
-edition = "2015"   # the default edition for code blocks
+edition = "2024"   # the default edition for code blocks
 
 [build]
 build-dir = "book"                # the directory where the output is placed
@@ -17,7 +17,6 @@ extra-watch-dirs = []             # directories to watch for triggering builds
 
 [output.html]
 mathjax-support = true            # allows mathjax support for math equations
-
 
 [output.html.fold]
 enable = true     # whether or not to enable section folding

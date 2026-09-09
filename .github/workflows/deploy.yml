@@ -33,11 +33,17 @@ jobs:
 
       - name: Install mdbook with cargo
         run: cargo install mdbook
+
+      - name: Output mdBook version
+        run: mdbook --version
       
       - name: Run mdBook tests
         run: mdbook test
+      
+      - name: Clean artifacts before building
+        run: mdbook clean
 
-      - name: Build Book with cargo
+      - name: Build Book with mdBook
         run: mdbook build
 
       - name: Setup Pages
