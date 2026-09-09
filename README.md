@@ -1,6 +1,6 @@
 # 🦀 Ferris's Rust Notes
 
-📖 Read the book online at: [Github Pages](https://chenoveko.github.io/ferrys-book/)
+📖 Read the book online at: [Github Pages](https://chenoveko.github.io/ferris-notes/)
 
 ## 🛠️ Build the Book Locally
 
