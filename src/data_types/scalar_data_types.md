@@ -1,6 +1,6 @@
-# Scalar Data Types
+# **Scalar Data Types**
 
-## 📗 Integers (Signed and Unsigned)
+## 📗 **Integers** (Signed and Unsigned)
 | Length | Signed | Range | Unsigned | Range |
 |--------|--------|-------|----------|-------|
 | 8-bit | `i8` | -128 to 127 | `u8` | 0 to 255 |
@@ -17,7 +17,7 @@ let days: usize = 55;
 let years: isize = -15_000;
 # }
 ```
-## 📗 String Literals
+## 📗 **String Literals**
 Values written directly in the source code and known at compile time.
 ```rust
 # fn main() {
@@ -34,7 +34,7 @@ println!("{raw_filepath}");
 # }
 ```
 
-## 📗 Methods
+## 📗 **Methods**
 A method is a function that lives on a value. It's an action we can ask the value to execut
 ```rust
 # fn main() {
@@ -46,7 +46,7 @@ println!("{}", empty_space.trim());
 # }
 ```
 
-## 📗 Floating-Point
+## 📗 **Floating-Point**
 | Length | Type | Approximate range | Precision |
 |--------|------|-------------------|-----------|
 | 32-bit | `f32` | ±1.18 × 10⁻³⁸ to ±3.40 × 10³⁸ | ~6–9 decimal digits |
@@ -64,7 +64,7 @@ println!("The current value of pi formatted is {:.3}", pi);
 # }
 ```
 
-## 📘 Casting
+## 📘 **Casting**
 Casting is the process of converting a value from one type to another using the **as** keyword
 - Value must fit within the constraints of the new assigned type
 - Casting to a smaller or incompatible numeric type may lose information
@@ -81,7 +81,7 @@ println!("Miles Away as f32 {:.2}", miles_away_f32);
 # }
 ```
 
-## 📗 Numeric Operations
+## 📗 **Numeric Operations**
 Basic math operators
 ```rust
 # fn main() {
@@ -114,7 +114,7 @@ println!("Actual year: {}", year); // 2026
 # }
 ```
 
-## 📗 Booleans
+## 📗 **Booleans**
 | Operator | Description | Example |
 |----------|-------------|---------|
 | `!` | NOT / Inversion | `!true` |
@@ -144,7 +144,7 @@ println!("OR operator: {}", true || false);
 # }
 ```
 
-## 📗 Characters
+## 📗 **Characters**
 - Represents a single unicode character
 - unicode is a computing standard for the representation of text for most of the world's writing system
 - Use single quotes

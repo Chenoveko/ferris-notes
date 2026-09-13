@@ -1,33 +1,33 @@
-# 🦀 Ferris's Rust Notes
+# 🦀 **Ferris's Rust Notes**
 
 Personal notes from a physician learning **Rust**.
 
 For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 
-## 📚 Difficulty Levels
+## 📚 **Difficulty Levels**
 
 - 📗 **Basic** — simple introductory concepts
 - 📘 **Intermediate** — fundamental concepts that require more understanding
 - 📙 **Advanced** — complex concepts with additional details
 - 📕 **Very Advanced** — difficult concepts that combine several ideas
 
-## 🗃️ Topics Covered
+## 🗃️ **Topics Covered**
 
-1. 🕺🏻 Introduction
+1. [🕺🏻 Introduction](introduction.md)
 2. [🏷️ Variables and Mutability](variables_and_mutability.md)
 3. [📦 Data Types](data_types/index.html)
 4. [🕹️ Functions](functions.md)
 5. [🔄 Control Flow](control_flow.md)
 6. [💼 Ownership](ownership/index.html)
-7. 🍞 Slices
-8. 🏗️ Structs
-9. 🔀 Enums
-10. ⚙️ Generics
-11. 🎯 `Option` and `Result` Enums
-12. ➡ Vectors
-13. 🧩 Project Structure
-14. 🔗 Strings
-15. 🗺️ `HashMap` and `HashSet`
+7. [🍞 Slices](slices.md)
+8. [🏗️ Structs](structs.md)
+9. [🔀 Enums](enums.md)
+10. [⚙️ Generics](generics.md)
+11. [🎯 `Option` and `Result` Enums](option_and_result/index.html)
+12. [➡ Vectors](vectors.md)
+13. [🧩 Project Structure](project_structure.md)
+14. [🔗 Strings](strings.md)
+15. [🗺️ `HashMap` and `HashSet`](hashmap_and_hashset/index.html)
 16. 🚨 Error Handling
 17. 🤝 Traits
 18. ⏳ Lifetimes

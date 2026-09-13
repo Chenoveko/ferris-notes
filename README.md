@@ -40,7 +40,7 @@ git clone https://github.com/Chenoveko/ferris-notes.git
 ### 8. Build and serve the book
 Run this command inside the cloned repository:
 ```bash
-mdbook serve --open p 8080
+mdbook serve --open -p 8080
 ```
 The book will be available locally, usually at:
 ```bash

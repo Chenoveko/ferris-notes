@@ -1,6 +1,6 @@
-# Variables and Mutability 
+# 🏷️ **Variables and Mutability**
 
-## 📗 Variables
+## 📗 **Variables**
 ```rust
 # fn main() {
 let apples = 50; // Rust infers the type from the value
@@ -8,7 +8,7 @@ let oranges: i32 = 25;
 let _fruits = apples + oranges; // '_' prefix suppresses the unused-variable warning
 # }
 ```
-## 📗 Interpolation using Curly Braces
+## 📗 **Interpolation using Curly Braces**
 Interpolation means inserting a value into a string. Rust provides three forms of interpolation:
 1. Sequential placeholders
 2. Variable capture
@@ -28,7 +28,7 @@ println!(
 );
 # }
 ```
-## 📗 Mutable and Immutable Variables
+## 📗 **Mutable and Immutable Variables**
 Variables are immutable by default. Value can change, type can't change
 ```rust
 # fn main() {
@@ -38,7 +38,7 @@ gym_reps = 12;
 println!("Now I plan to do {} reps.", gym_reps);
 # }
 ```
-## 📗 Variable Shadowing
+## 📗 **Variable Shadowing**
 Variable shadowing refers to declaring a new variable with the same name. The new variable shadows the previous one and can have a different type.
 ```rust
 # fn main() {
@@ -53,7 +53,7 @@ println!("New grams of protein in integer type {}", grams_of_protein);
 # }
 ```
 
-## 📗 Scope
+## 📗 **Scope**
 The scope is the boundary or region of code where a variable is valid
 ```rust
 # fn main() {
@@ -68,7 +68,7 @@ let macchiato_price = 4.99;
 # }
 ```
 
-## 📗 Type Aliases
+## 📗 **Type Aliases**
 Is an alternate name that we can assign to an existing type. Type aliases can also be declared at the top of the file, outside main, so they can be used by other functions within the module.
 ```rust
 # fn main() {
@@ -78,7 +78,7 @@ println!("The race is {} miles long.", mile_race_length);
 # }
 ```
 
-## 📗 Compiler Attributes
+## 📗 **Compiler Attributes**
 A compiler attribute is metadata that provides instructions or information to the compiler. They can control compiler behavior, configure lints, mark tests, enable conditional compilation, etc. Attributes use the syntax `#[...]` for **outer attributes** or `#![...]`for **inner attributes**
     
 

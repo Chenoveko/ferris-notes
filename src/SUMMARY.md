@@ -19,7 +19,18 @@
     - [Introduction to References and Borrowing](ownership/intro_to_references_and_borrowing.md)
     - [Ownership in Functions](ownership/ownership_in_functions.md)
     - [Advanced References and Borrowing](ownership/advanced_references_and_borrowing.md)
-- [🍞 Slices](slices.md) 
+- [🍞 Slices](slices.md) <!-- done -->
+- [🏗️ Structs](structs.md) <!-- done -->
+- [🔀 Enums](enums.md) <!-- done -->
+- [⚙️ Generics](generics.md) <!-- done -->
+- [🎯 `Option` and `Result` Enums](option_and_result/README.md) <!-- done -->
+    - [`Option enum`](option_and_result/option.md)
+    - [`Result enum`](option_and_result/result.md)
+- [➡ Vectors](vectors.md) <!-- done -->
+- [🔗 Strings](strings.md) <!-- done -->
+- [🗺️ `HashMap` and `HashSet`](hashmap_and_hashset/README.md) <!-- done -->
+    - [`HashMap`](hashmap_and_hashset/hashmap.md)
+    - [`HashSet`](hashmap_and_hashset/hashset.md)
 
 # Rust in Physics
 

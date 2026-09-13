@@ -1,4 +1,4 @@
-# Functions
+# 🕹️ Functions
 Rust code uses **snake case** as the conventional style for function and variable names, in which all letters are lowercase and underscores separate words.
 ```rust,editable
 fn another_function() {

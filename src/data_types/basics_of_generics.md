@@ -1,4 +1,4 @@
-# 📘 Basics of Generics
+# 📘 **Basics of Generics**
 
 A generic is a type parameter that allows code to work with different types while preserving type safety.
 

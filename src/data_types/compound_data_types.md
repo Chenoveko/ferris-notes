@@ -1,6 +1,6 @@
-# Compound Data Types
+# **Compound Data Types**
 
-## 📘 Arrays
+## 📘 **Arrays**
 Fixed-size collection of homogeneous data (data of the same type)
 ```rust
 # fn main() {
@@ -19,7 +19,7 @@ println!("British Seasons: {} {} {} {}", seasons[0], seasons[1], seasons[2], sea
 # }
 ```
 
-## 📘 Tuples
+## 📘 **Tuples**
 Fixed-size collection that can contain values of different types
 ```rust
 # fn main() {
@@ -31,7 +31,7 @@ println!("Name: {}, Age: {}, Department: {}", name, age, department);
 # }
 ```
 
-## 📘 Ranges
+## 📘 **Ranges**
 A range is a sequence/interval of consecutive values. We have to improt using the **standard library**
 - `use std::ops::Range;`
 - `use std::ops::RangeInclusive;`

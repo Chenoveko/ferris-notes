@@ -1,4 +1,4 @@
-# Basics of Traits
+# **Basics of Traits**
 - A trait is a contract that requires that a type support one or more methods
 - Traits establish consistency between types; methods that represent the same behavior have the same name
 - When a type opts in to honoring a trait's requirements, we say the type implements the trait
@@ -7,7 +7,7 @@
 - A type can implement multiple traits. There are hundreds of traits available in Rust
 - A trait is called an interface or protocol in other programming languages
 
-## 📘 Display Trait
+## 📘 **Display Trait**
 - The Display trait requires that a type can be represented as a user-friendly, readable string
 - The Display trait mandates a format method that returns the string
 - When we use the {} interpolation syntax, Rust relies on the format method
@@ -22,7 +22,7 @@ println!("Display Trait for booleans: {}", true);
 # }
 ```
 
-## 📘 Debug Trait
+## 📘 **Debug Trait**
 - The Debug trait is used for developer-oriented representations of values
 - `{:?}` -> Debug Formatting
 - `{:#?}` -> Pretty-Printing Debug Formatting
@@ -43,7 +43,7 @@ println!("Week Days Inclusive: {:?}", week_days_inclusive);
 # }
 ```
 
-### Debug Macro
+### **Debug Macro**
 - Prints and returns the value of a given expression for quick and dirty debugging (for development)
 - It uses the Debug Traits's format method to output several helpfull deatils about the content we pass in here
 - The argument that we pass to the dbg! macro must implement the Debug Trait so that Rust can print out
