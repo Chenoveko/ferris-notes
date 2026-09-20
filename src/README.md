@@ -1,15 +1,38 @@
 # 🦀 **Ferris's Rust Notes**
 
-Personal notes from a physician learning **Rust**.
+These notes are my personal journey as a physician learning Rust. 
+They are intended to organize the concepts, examples, and lessons I have encountered 
+while studying this powerful language. By writing and sharing what I learn, 
+I hope to reinforce my own understanding and make the learning process easier for others.
+
+> “Education is the most powerful weapon which you can use to change the world.”  
+> — Nelson Mandela, 1990
+
+> “Teaching is not the transfer of knowledge, but the creation of the possibilities for the production or construction of knowledge.”  
+> — Paulo Freire, 1996
+
+> “While we teach, we learn.”  
+> — Seneca, 63-65 CE
+
+> “One child, one teacher, one book, and one pen can change the world.”  
+> — Malala Yousafzai, 2013
+
+> “Tell me and I forget; teach me and I may remember; involve me and I learn.”
+> — Attributed to Confucius
+
+> “I believe that education, therefore, is a process of living and not a preparation for future living.”  
+> — John Dewey, 1897
 
 For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 
+![Ferris](https://rustacean.net/assets/rustacean-flat-happy.svg)
+
 ## 📚 **Difficulty Levels**
 
-- 📗 **Basic** — simple introductory concepts
-- 📘 **Intermediate** — fundamental concepts that require more understanding
-- 📙 **Advanced** — complex concepts with additional details
-- 📕 **Very Advanced** — difficult concepts that combine several ideas
+- 📗 **Basic** 
+- 📘 **Intermediate** 
+- 📙 **Advanced** 
+- 📕 **Very Advanced** 
 
 ## 🗃️ **Topics Covered**
 
@@ -29,13 +52,14 @@ For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 14. [🔗 Strings](strings.md)
 15. [🗺️ `HashMap` and `HashSet`](hashmap_and_hashset/index.html)
 16. 🚨 Error Handling
-17. 🤝 Traits
-18. ⏳ Lifetimes
-19. 🛠️ Closures
+17. [🤝 Traits](traits/index.html)
+18. [⏳ Lifetimes](lifetimes.md)
+19. [🚰 Closures](closures.md)
 20. 🔁 Iterators
 21. 📝 Testing
 22. 👉 Smart Pointers
 23. 🧰 Popular Crates
+34. 🚀 Optimization [Performance Guide](https://www.youtube.com/watch?v=q3VOsGzkM-M)
 
 ## 📖 Sources and Bibliography
 

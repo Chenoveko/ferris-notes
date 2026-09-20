@@ -31,6 +31,14 @@
 - [🗺️ `HashMap` and `HashSet`](hashmap_and_hashset/README.md) <!-- done -->
     - [`HashMap`](hashmap_and_hashset/hashmap.md)
     - [`HashSet`](hashmap_and_hashset/hashset.md)
+- [🤝 Traits](traits/README.md)
+    - [Fundamentals](traits/fundamentals.md)
+    - [Accessors Traits & Supertraits](traits/accessors_and_supertraits.md)
+    - [Traits as Constraints](traits/traits_as_constraints.md)
+    - [Trait Objects & Dynamic Dispatch](traits/trait_objects_and_dyn.md)
+    - [Standard Library Traits](traits/std_traits.md)
+- [⏳ Lifetimes](lifetimes.md)
+- [🚰 Closures](closures.md)
 
 # Rust in Physics
 

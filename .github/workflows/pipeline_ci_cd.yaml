@@ -16,7 +16,7 @@ jobs:
         run: cargo version
 
   deploy:
-    name: deploy mdBook on Github Pages 
+    name: Deploy mdBook on Github Pages 
     needs: test
     runs-on: ubuntu-latest
     permissions:
@@ -24,7 +24,8 @@ jobs:
       pages: write  
       id-token: write 
     steps:
-      - uses: actions/checkout@v7
+      - name: Use GH Actions checkout@v7
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
