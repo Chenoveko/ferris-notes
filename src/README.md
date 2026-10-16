@@ -51,14 +51,17 @@ For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 13. [🧩 Project Structure](project_structure.md)
 14. [🔗 Strings](strings.md)
 15. [🗺️ `HashMap` and `HashSet`](hashmap_and_hashset/index.html)
-16. 🚨 Error Handling
+16. [🚨 Error Handling](error_handling.md)
 17. [🤝 Traits](traits/index.html)
 18. [⏳ Lifetimes](lifetimes.md)
 19. [🚰 Closures](closures.md)
-20. 🔁 Iterators
+20. [🔁 Iterators](iterators/index.html)
 21. 📝 Testing
 22. 👉 Smart Pointers
 23. 🧰 Popular Crates
+   - 📊 plotkit [Gh](https://github.com/anonymousAAK/plotrs)
+   - 📊 kuva [Gh](https://github.com/Psy-Fer/kuva)
+
 34. 🚀 Optimization [Performance Guide](https://www.youtube.com/watch?v=q3VOsGzkM-M)
 
 ## 📖 Sources and Bibliography

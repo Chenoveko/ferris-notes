@@ -27,10 +27,12 @@
     - [`Option enum`](option_and_result/option.md)
     - [`Result enum`](option_and_result/result.md)
 - [➡ Vectors](vectors.md) <!-- done -->
+- [ 🧩 Project Structure](project_structure.md)
 - [🔗 Strings](strings.md) <!-- done -->
 - [🗺️ `HashMap` and `HashSet`](hashmap_and_hashset/README.md) <!-- done -->
     - [`HashMap`](hashmap_and_hashset/hashmap.md)
     - [`HashSet`](hashmap_and_hashset/hashset.md)
+- [🚨 Error Handling](error_handling.md)
 - [🤝 Traits](traits/README.md)
     - [Fundamentals](traits/fundamentals.md)
     - [Accessors Traits & Supertraits](traits/accessors_and_supertraits.md)
@@ -39,8 +41,26 @@
     - [Standard Library Traits](traits/std_traits.md)
 - [⏳ Lifetimes](lifetimes.md)
 - [🚰 Closures](closures.md)
+- [🔁 Iterators](iterators/README.md)
+    - [Fundamentals](iterators/fundamentals.md)
+    - [Consuming Iterators Methods](iterators/consuming_methods.md)
+    - [Adapter Methods](iterators/adapters_methods.md)
+    - [Simple Iterator Projects](iterators/simple_projects.md)
 
 # Rust in Physics
 
 - [Physics](physics.md)
+- [Single-Variable Root Finding](single-variable-root-finding.md)
+- [Single-Variable Optimization](single-variable-optimization.md)
+- [Derivatives](derivatives.md)
+- [Integrals](integrals.md)
+- [Initial Value Problems for Ordinary Differential Equations](ivp/README.md)
+    - [First-Order ODEs in One Independent Variable](ivp/first_order_ode.md)
+    - [First-Order Systems of ODEs](ivp/first_order_system.md)
+    - [Second-Order ODEs in One Independent Variable](ivp/second_order_ode.md)
+    - [Adaptive Methods](ivp/adaptive.md)
+    - [Multistep Methods](ivp/multistep.md)
+    - [Multistep Adaptive Methods](ivp/multistep_adaptive.md)
+- [Boundary Value Problems for Ordinary Differential Equations](bvp/README.md)
+- [Interpolation and Extrapolation](interpolation-and-extrapolation.md)
    
