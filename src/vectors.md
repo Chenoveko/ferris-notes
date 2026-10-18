@@ -72,7 +72,7 @@ println!("Pizza diameters after pop: {:?}", pizza_diameters);
 ```
 
 ## 📗 **`remove` method**
-Removes and returns an element at a specific index. The elements after it are shifted to the left. It panics at runtime if the index is invalid.
+Removes and returns an element at a specific index. The elements after it are shifted to the left. It runs in O(n). It panics at runtime if the index is invalid.
 
 ```rust
 # fn main() {
@@ -85,6 +85,21 @@ pizza_diameters.remove(0);
 println!("Pizza diameters after remove: {:?}", pizza_diameters);
 # }
 ```
+## 📗 **`swap_remove` method**
+Removes and returns the element at a specific index by replacing it with the last element, then removing the last slot. It runs in O(1), but may change the order of the elements. It panics at runtime if the index is invalid.
+
+```rust
+# fn main() {
+let mut pizza_diameters: Vec<i8> = vec![25, 35, 45];
+
+println!("Pizza diameters: {:?}", pizza_diameters);
+
+pizza_diameters.swap_remove(0);
+
+println!("Pizza diameters after swap_remove: {:?}", pizza_diameters);
+# }
+```
+
 ## 📗 **Ownership with Vectors**
 When we create a **vector** with owned values such as `String`, ownership of those values moves into the vector.
 ```rust

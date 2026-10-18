@@ -59,10 +59,9 @@ For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 21. 📝 Testing
 22. 👉 Smart Pointers
 23. 🧰 Popular Crates
-   - 📊 plotkit [Gh](https://github.com/anonymousAAK/plotrs)
    - 📊 kuva [Gh](https://github.com/Psy-Fer/kuva)
 
-34. 🚀 Optimization [Performance Guide](https://www.youtube.com/watch?v=q3VOsGzkM-M)
+34. [🚀 Optimization](optimization.md) 
 
 ## 📖 Sources and Bibliography
 
@@ -77,11 +76,20 @@ This book is based on the following learning resources:
 3. Android Team at Google. *Comprehensive Rust*. Google.  
    Available at: [Comprehensive Rust](https://google.github.io/comprehensive-rust/)
 
-4. The Rust Community. *The Rust Programming Language*.  
+4. Klabnik, S., Nichols, C., & Krycho, C. *The Rust Programming Language*, The Rust Community.  
    Available at: [The Rust Programming Language](https://doc.rust-lang.org/book/)
 
-5. The Rust Community. *Rust By Example*.  
+5. Researchers at the Cognitive Engineering Lab, Brown University. *The Rust Programming Language: A Different Approach*, Brown University.  
+   Available at: [The Rust Programming Language](https://rust-book.cs.brown.edu/)
+
+6. The Rust Community. *Rust By Example*.  
    Available at: [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
 
-6. Pshonyak, Bogdan. *Let's Get Rusty*. YouTube.  
+7. Pshonyak, Bogdan. *Let's Get Rusty*. YouTube.  
    Available at: [Let's Get Rusty](https://www.youtube.com/@letsgetrusty)
+
+8. Ruiz de Elvira Carrascal, Jacobo. *Computational Physics Notes*, Complutense University of Madrid.
+   Available at: [Cengage: Numerical Analysis](https://docta.ucm.es/entities/publication/65c56b7d-3e78-4d5b-9211-75bd477e68b0?utm_source=chatgpt.com)
+
+9. Burden, Richard L., and J. Douglas Faires. *Numerical Analysis*. 10th ed.,Cengage Learning.  
+   Available at: [Cengage: Numerical Analysis](https://www.cengage.com/c/numerical-analysis-10e-faires/9781305253667/)

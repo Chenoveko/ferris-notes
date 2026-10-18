@@ -134,6 +134,78 @@ fn main() {
 ```
 ![rk4](../images/rk4.svg)
 
+
+## Infinite Ranges
+We could use the following change of variable
+
+\\[ u = \frac{t}{1 + t} \quad\Longleftrightarrow\quad t = \frac{u}{1 - u}\\]
+
+when \\(t \to \infty \\) the new variable \\(u \to 1 \\)
+
+Our ODE
+
+\\[ \frac{dx}{dt}  = f(x, t) \\]
+
+Could be rewritten as
+
+\\[ \frac{dx}{du} \frac{du}{dt}  = f(x, t) \Rightarrow \frac{dx}{du} = \frac{dt}{du} f(x, \frac{u}{1 - u}) = (1 - u)^{-2} f(x, \frac{u}{1 - u})\\]
+
+so
+
+\\[ \frac{dx}{du}  = g(x, u) \\]
+
+**Example**
+
+\\[ \frac{dx}{dt}  = \frac{1}{x² + t²} \\]
+
+with the change of variable
+
+\\[ \frac{dx}{du}  = \frac{1}{(1 - u)^{2} x² + u²} = g(x, u) \\]
+
+```rust
+# use std::time::Instant;
+# 
+# fn rk4<F>(function: F, initial: f64, a: f64, b: f64, n: usize,) -> Vec<(f64, f64)> 
+# where
+    # F: Fn(f64, f64) -> f64
+# {
+    # assert!(n > 0, "n must be greater than 0");
+# 
+    # let h: f64 = (b - a) / n as f64;
+# 
+    # let t_points: Vec<f64> = (0..=n)
+        # .map(|i| a + i as f64 * h)
+        # .collect();
+#     
+    # let mut x_points: Vec<f64> = Vec::with_capacity(n + 1);
+# 
+    # let mut x : f64 = initial;
+# 
+    # for t in t_points.iter() {
+        # x_points.push(x);
+        # let k1: f64 = h * function(x, *t);
+        # let k2: f64 = h * function(x + k1 / 2.0, *t + h / 2.0);
+        # let k3: f64 = h * function(x + k2 / 2.0, *t + h / 2.0);
+        # let k4: f64 = h * function(x + k3, *t + h);
+        # x += (k1 + 2.0 * k2 +2.0 * k3 + k4) / 6.0;
+    # }
+#     
+    # t_points.into_iter().zip(x_points).collect()
+# }
+#
+fn main() {
+    let function = |x: f64, u: f64|  1.0 / ((1.0 - u).powi(2) * x.powi(2) + u.powi(2));
+
+    let start = Instant::now();
+    let data: Vec<(f64, f64)> = rk4(function, 1.0, 0.0, 0.99, 1000);
+    let end = start.elapsed();
+
+    println!("RK4 Method took {} microseconds.", end.as_micros());
+}
+```
+
+![rk4 infinite](../images/rk4_infinite.svg)
+
 ## Radioactive Decay
 Radioactive decay is described by the differential equation
 

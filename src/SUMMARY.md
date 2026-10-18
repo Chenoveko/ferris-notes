@@ -4,7 +4,9 @@
 
 # Rust Programming Language
 
-- [🕺🏻Introduction](introduction.md)
+- [🕺🏻Introduction](intro/README.md)
+    - [What Is Rust?](intro/what.md)
+    - [Rust’s Inspirations](intro/inspirations.md)
 - [🏷️ Variables and Mutability](variables_and_mutability.md) <!-- done -->
 - [📦 Data Types](data_types/README.md) <!-- done -->
     - [Scalar Data Types](data_types/scalar_data_types.md)
@@ -46,6 +48,7 @@
     - [Consuming Iterators Methods](iterators/consuming_methods.md)
     - [Adapter Methods](iterators/adapters_methods.md)
     - [Simple Iterator Projects](iterators/simple_projects.md)
+- [🚀 Optimization](optimization.md)
 
 # Rust in Physics
 
@@ -61,6 +64,7 @@
     - [Adaptive Methods](ivp/adaptive.md)
     - [Multistep Methods](ivp/multistep.md)
     - [Multistep Adaptive Methods](ivp/multistep_adaptive.md)
+    - [Stability and Stiffness](ivp/stability_and_stiffness.md)
 - [Boundary Value Problems for Ordinary Differential Equations](bvp/README.md)
 - [Interpolation and Extrapolation](interpolation-and-extrapolation.md)
    
