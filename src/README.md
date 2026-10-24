@@ -23,7 +23,7 @@ I hope to reinforce my own understanding and make the learning process easier fo
 > “I believe that education, therefore, is a process of living and not a preparation for future living.”  
 > — John Dewey, 1897
 
-For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
+For easy testing, use the [Rust Playground](https://play.rust-lang.org/). 
 
 ![Ferris](https://rustacean.net/assets/rustacean-flat-happy.svg)
 
@@ -36,7 +36,7 @@ For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 
 ## 🗃️ **Topics Covered**
 
-1. [🕺🏻 Introduction](introduction.md)
+1. [🕺🏻 Introduction](intro/index.html)
 2. [🏷️ Variables and Mutability](variables_and_mutability.md)
 3. [📦 Data Types](data_types/index.html)
 4. [🕹️ Functions](functions.md)
@@ -56,14 +56,14 @@ For easy testing, use the [Rust Playground](https://play.rust-lang.org/).
 18. [⏳ Lifetimes](lifetimes.md)
 19. [🚰 Closures](closures.md)
 20. [🔁 Iterators](iterators/index.html)
-21. 📝 Testing
-22. 👉 Smart Pointers
-23. 🧰 Popular Crates
-   - 📊 kuva [Gh](https://github.com/Psy-Fer/kuva)
+21. [📝 Testing](tests/index.html)
+22. 🧠 Smart Pointers
+23. [🧰 Popular Crates](crates/index.html)
+24. [🧵 Multithreading](multi/index.html)
+25. [⚡ Asynchronous](async.md)
+26. [🚀 Optimization](optimization.md) 
 
-34. [🚀 Optimization](optimization.md) 
-
-## 📖 Sources and Bibliography
+## 📖 **Sources and Bibliography**
 
 This book is based on the following learning resources:
 
@@ -85,11 +85,14 @@ This book is based on the following learning resources:
 6. The Rust Community. *Rust By Example*.  
    Available at: [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
 
-7. Pshonyak, Bogdan. *Let's Get Rusty*. YouTube.  
+7. The Rust Community. *Rust Cookbook*.  
+   Available at: [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
+
+8. Pshonyak, Bogdan. *Let's Get Rusty*. YouTube.  
    Available at: [Let's Get Rusty](https://www.youtube.com/@letsgetrusty)
 
-8. Ruiz de Elvira Carrascal, Jacobo. *Computational Physics Notes*, Complutense University of Madrid.
-   Available at: [Cengage: Numerical Analysis](https://docta.ucm.es/entities/publication/65c56b7d-3e78-4d5b-9211-75bd477e68b0?utm_source=chatgpt.com)
+9. Ruiz de Elvira Carrascal, Jacobo. *Computational Physics Notes*, Complutense University of Madrid.
+   Available at: [UCM: Computational Physics](https://docta.ucm.es/entities/publication/65c56b7d-3e78-4d5b-9211-75bd477e68b0?utm_source=chatgpt.com)
 
-9. Burden, Richard L., and J. Douglas Faires. *Numerical Analysis*. 10th ed.,Cengage Learning.  
+10. Burden, Richard L., and J. Douglas Faires. *Numerical Analysis*. 10th ed.,Cengage Learning.  
    Available at: [Cengage: Numerical Analysis](https://www.cengage.com/c/numerical-analysis-10e-faires/9781305253667/)

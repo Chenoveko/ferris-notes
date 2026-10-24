@@ -70,7 +70,7 @@ Unit-like structs are often used as marker types or to implement a trait
 struct Marker;
 ```
 
-## 📘  **Adding Behavior to the Struct**
+## 📘 **Adding Behavior to the Struct**
 Both **methods** and **associated functions** are defined inside an `impl` block
 
 The key difference is:
@@ -252,7 +252,7 @@ fn main() {
 }
 ```
 
-## 📙  **Builder Pattern**
+## 📙 **Builder Pattern**
 A design pattern is a recommended way to write or structure code to solve specific problems. Useful when you would otherwise require many constructors or where construction has side effects.
 
 **Advantages**
