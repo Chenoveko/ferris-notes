@@ -34,6 +34,9 @@ jobs:
 
       - name: Install mdbook with cargo
         run: cargo install mdbook
+      
+      - name: Install mdbook-katex preprocessor with cargo
+        run: cargo install mdbook-katex
 
       - name: Output mdBook version
         run: mdbook --version
