@@ -1,6 +1,6 @@
 # 🌐 [reqwest](https://crates.io/crates/reqwest)
 
-```rust
+```rust,ignore
 use std::error::Error;
 use reqwest::get;
 

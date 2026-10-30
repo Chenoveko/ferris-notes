@@ -145,7 +145,7 @@ for rcv in rx {
 ```
 
 ### **Multiple Producers**
-The `mpsc` channel supports multiple producers, meaning multiple threads can send messages to the same receiver.
+The `mpsc` (Multi Producer, Single Consumer) channel supports multiple producers, meaning multiple threads can send messages to the same receiver.
 
 To send messages from multiple threads to a single receiver, clone the transmitter (`tx`):
 

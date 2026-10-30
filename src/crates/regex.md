@@ -3,7 +3,7 @@ A **regular expression** (RegEx) is a search pattern for text
 
 ## 📗 **`find` Method**
 `find` searches the text for the first match. It returns `Some(Match)` if it finds one, or `None` if there is no match. The match includes the matched text and its byte range in the original string.
-```rust
+```rust,ignore
 # use regex::Regex;
 # fn main() {
 let re = Regex::new(r"ue").unwrap();
@@ -17,7 +17,7 @@ match re.find(text) {
 ```
 ## 📗 **`find_iter` Method**
 `find_iter` searches the text and returns an iterator over all non-overlapping matches.
-```rust
+```rust,ignore
 # use regex::Regex;
 # fn main() {
 let re = Regex::new(r"ue").unwrap();
@@ -30,7 +30,7 @@ for data in re.find_iter(text) {
 ```
 
 ## 📗 **Searching for Digits**
-```rust
+```rust,ignore
 # use regex::Regex;
 # fn main() {
 let re = Regex::new(r"[0-9]").unwrap();
@@ -42,7 +42,7 @@ for data in re.find_iter(text) {
 # }
 ```
 ## 📗 **Searching for Alphanumerics**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -55,7 +55,7 @@ for data in re.find_iter(text) {
 # }
 ```
 For non alphanumerics
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -69,7 +69,7 @@ for data in re.find_iter(text) {
 ```
 
 ## 📗 **Searching for Whitespaces**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -83,7 +83,7 @@ for data in re.find_iter(text) {
 ```
 
 ## 📗 **Word Boundaries**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -97,7 +97,7 @@ for data in re.find_iter(text) {
 ```
 
 ## 📗 **Dot Metacharacter**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -111,7 +111,7 @@ for data in re.find_iter(text) {
 ```
 
 ## 📗 **Square Brackets with Characters**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -125,7 +125,7 @@ for data in re.find_iter(text) {
 ```
 
 ## 📗 **Number of Matches**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -137,7 +137,7 @@ println!("Number of matches: {count}");
 # }
 ```
 ## 📗 **OR Logic**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -150,7 +150,7 @@ for data in re.find_iter(text) {
 # }
 ```
 ## 📗 **Anchors**
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -163,7 +163,7 @@ println!("{}", re.is_match("Hello there")); // false
 
 ## 📗 **Capture Groups**
 
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {
@@ -180,7 +180,7 @@ if let Some(caps) = re.captures(text) {
 ```
 ## 📗 **`replace_all` Method**
 
-```rust
+```rust,ignore
 # use regex::Regex;
 #
 # fn main() {

@@ -1,3 +1,4 @@
+use kuva::plot::line::LineStyle;
 use kuva::plot::LinePlot;
 use kuva::backend::svg::SvgBackend;
 use kuva::render::render::render_multiple;
@@ -31,20 +32,19 @@ where
 fn main() {
     let function = |x: f64, t: f64| - x.powi(3) + t.sin();
 
-    let data: Vec<(f64, f64)> = euler(function, 0.0, 0.0, 10.0, 1000);
+    let data: Vec<(f64, f64)> = euler(function, 1.32, 0.0, 15.0, 1000);
 
     let plot = LinePlot::new()
         .with_data(data)
         .with_color("steelblue")
-        .with_line_style("Solid")
+        .with_line_style(LineStyle::Solid)
         .with_stroke_width(2.0);
 
     let plots = vec![Plot::Line(plot)];
     let layout = Layout::auto_from_plots(&plots)
-        .with_title("Euler Method Approximation of ODE")
         .with_x_label("$t$")
         .with_y_label("$x(t)$");
 
     let svg = SvgBackend.render_scene(&render_multiple(plots, layout));
-    std::fs::write("line.svg", svg).unwrap();
+    std::fs::write("euler.svg", svg).unwrap();
 }

@@ -63,15 +63,16 @@
     - [🌊 tokio](crates/tokio.md)
     - [🌐 reqwest](crates/reqwest.md)
 - [🧵 Multithreading](multi/README.md)
-    - [threads](multi/threads.md)
+    - [Threads](multi/threads.md)
     - [rayon](multi/rayon.md)
     - [crossbeam](multi/crossbeam.md)
 - [⚡ Asynchronous](async.md)
+- [💾 Databases](db.md)
 - [🚀 Optimization](optimization.md)
 
-# Rust in Physics
+# Computational Physics
 
-- [Physics](physics.md)
+- [Introduction](physics.md)
 - [Single-Variable Root Finding](single-variable-root-finding.md)
 - [Single-Variable Optimization](single-variable-optimization.md)
 - [Derivatives](derivatives.md)
@@ -84,6 +85,9 @@
     - [Multistep Methods](ivp/multistep.md)
     - [Multistep Adaptive Methods](ivp/multistep_adaptive.md)
     - [Stability and Stiffness](ivp/stability_and_stiffness.md)
+- [Linear Systems Solutions](linear-systems/README.md)
+    - [Direct Methods](linear-systems/dir_methods.md)
+    - [Iterative Methods](linear-systems/it_methods.md)
 - [Boundary Value Problems for Ordinary Differential Equations](bvp/README.md)
 - [Interpolation and Extrapolation](interpolation-and-extrapolation.md)
    

@@ -15,6 +15,9 @@ create-missing = true             # whether or not to create missing pages
 use-default-preprocessors = true  # use the default preprocessors
 extra-watch-dirs = []             # directories to watch for triggering builds
 
+[preprocessor.katex]
+after = ["links"]
+
 [output.html]
 mathjax-support = true            # allows mathjax support for math equations
 

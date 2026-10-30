@@ -3,6 +3,7 @@ use kuva::backend::svg::SvgBackend;
 use kuva::render::render::render_multiple;
 use kuva::render::layout::Layout;
 use kuva::render::plots::Plot;
+use kuva::plot::legend::LegendPosition;
 
 fn euler<F>(function: F, initial: f64, a: f64, b: f64, n: usize,) -> Vec<(f64, f64)> 
 where
@@ -82,18 +83,16 @@ where
 }
 
 fn main() {
-    // Carbon-14 (¹⁴C) radioactive decay.
-    // Its half-life is approximately 5,730 years.
     let initial: f64 = 100.0;
-    let half_life: f64 = 5730.0; // years
-    let lambda = 2.0_f64.ln() / half_life; // per year
+    let half_life: f64 = 5730.0; 
+    let lambda = 2.0_f64.ln() / half_life; 
 
     let decay = |n: f64, _t: f64| -lambda * n;
     let exact_solution = |t: f64| initial * (-lambda * t).exp();
 
-    let data_euler = euler(decay, initial, 0.0, 30_000.0, 10);
-    let data_rk2 = rk2(decay, initial, 0.0, 30_000.0, 10);
-    let data_rk4 = rk4(decay, initial, 0.0, 30_000.0, 10);
+    let data_euler = euler(decay, initial, 0.0, 30_000.0, 100);
+    let data_rk2 = rk2(decay, initial, 0.0, 30_000.0, 50);
+    let data_rk4 = rk4(decay, initial, 0.0, 30_000.0, 25);
     let data_exact: Vec<(f64, f64)> = (0..=10000)
         .map(|i| {
             let t = i as f64 * 30_000.0 / 10000.0;
@@ -107,27 +106,27 @@ fn main() {
         .with_color("red")
         .with_dotted()
         .with_stroke_width(2.0)
-        .with_legend("Euler");
+        .with_legend("Euler (100 steps)");
 
     let rk2_plot = LinePlot::new()
         .with_data(data_rk2)
         .with_color("orange")
         .with_dashed()
         .with_stroke_width(2.0)
-        .with_legend("RK2");
+        .with_legend("RK2 (50 steps)");
 
     let rk4_plot = LinePlot::new()
         .with_data(data_rk4)
         .with_color("green")
         .with_dashed()
         .with_stroke_width(2.0)
-        .with_legend("RK4");
+        .with_legend("RK4 (25 steps)");
 
     let exact_plot = LinePlot::new()
         .with_data(data_exact)
         .with_color("blue")
         .with_stroke_width(2.0)
-        .with_legend("Exact");
+        .with_legend("Analytical solution");
 
     let plots = vec![
         Plot::Line(euler_plot),
@@ -137,7 +136,8 @@ fn main() {
     ];
 
     let layout = Layout::auto_from_plots(&plots)
-        .with_title("Radioactive Decay of Carbon-14")
+        .with_legend_position(LegendPosition::InsideTopRight)
+        //.with_title("Radioactive Decay of Carbon-14")
         .with_x_label("$t [years]$")
         .with_y_label("$N(t)$");
 

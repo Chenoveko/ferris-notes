@@ -96,3 +96,6 @@ This book is based on the following learning resources:
 
 10. Burden, Richard L., and J. Douglas Faires. *Numerical Analysis*. 10th ed.,Cengage Learning.  
    Available at: [Cengage: Numerical Analysis](https://www.cengage.com/c/numerical-analysis-10e-faires/9781305253667/)
+
+11. LLanes Estrada, Felipe J. *Lecciones de Física en la Complutense*. YouTube.  
+   Available at: [Computational Physics at UCM](https://www.youtube.com/watch?v=4Ou-_5mgkQ0&list=PLSgUF7BQ06AU)

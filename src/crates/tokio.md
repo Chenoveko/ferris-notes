@@ -3,7 +3,7 @@ Tokio is an **asynchronous runtime** for Rust. It runs `async` tasks and provide
 
 ## **Hello world with tokio**
 
-```rust
+```rust,ignore
 use tokio::time::{sleep, Duration};
 
 #[tokio::main]
@@ -19,7 +19,7 @@ async fn main() {
 ## **Running tasks concurrently**
 `tokio::spawn` starts each task on the runtime.
 
-```rust
+```rust,ignore
 use tokio::time::{sleep, Duration};
 
 async fn task(id: u8) {
