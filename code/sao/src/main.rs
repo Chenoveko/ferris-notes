@@ -3,6 +3,7 @@ use kuva::backend::svg::SvgBackend;
 use kuva::render::render::render_multiple;
 use kuva::render::layout::Layout;
 use kuva::render::plots::Plot;
+use kuva::plot::legend::LegendPosition;
 
 fn rk4<F>(system: F, mut r: Vec<f64>, a: f64, b: f64, n: usize,) -> (Vec<(f64, f64)>, Vec<(f64, f64)>)
 where
@@ -58,28 +59,20 @@ fn main() {
     let x_plot = LinePlot::new()
         .with_data(x_data)
         .with_color("red")
+        .with_legend("x [m]")
         .with_stroke_width(2.0);
 
     let v_plot = LinePlot::new()
         .with_data(v_data)
         .with_color("steelblue")
+        .with_legend("v [m/s]")
         .with_stroke_width(2.0);
 
-    let x_plots = vec![Plot::Line(x_plot)];
-    let x_layout = Layout::auto_from_plots(&x_plots)
-        .with_title("Simple Harmonic Oscillator")
-        .with_x_label("t")
-        .with_y_label("x [m]");
+    let plots = vec![Plot::Line(x_plot), Plot::Line(v_plot)];
+    let layout = Layout::auto_from_plots(&plots)
+        .with_legend_position(LegendPosition::InsideTopRight)
+        .with_x_label("t");
 
-    let x_svg = SvgBackend.render_scene(&render_multiple(x_plots, x_layout));
-    std::fs::write("sao_x.svg", x_svg).unwrap();
-
-    let v_plots = vec![Plot::Line(v_plot)];
-    let v_layout = Layout::auto_from_plots(&v_plots)
-        .with_title("Simple Harmonic Oscillator")
-        .with_x_label("t")
-        .with_y_label("v [m/s]");
-
-    let v_svg = SvgBackend.render_scene(&render_multiple(v_plots, v_layout));
-    std::fs::write("sao_v.svg", v_svg).unwrap();
+    let svg = SvgBackend.render_scene(&render_multiple(plots, layout));
+    std::fs::write("sao.svg", svg).unwrap();
 }

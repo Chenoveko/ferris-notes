@@ -71,7 +71,6 @@ fn main() {
 
     let theta_plots = vec![Plot::Line(theta_plot)];
     let theta_layout = Layout::auto_from_plots(&theta_plots)
-        .with_title("Forced Pendulum")
         .with_x_label("t")
         .with_y_label("θ [rad]");
 
@@ -80,7 +79,6 @@ fn main() {
 
     let omega_plots = vec![Plot::Line(omega_plot)];
     let omega_layout = Layout::auto_from_plots(&omega_plots)
-        .with_title("Forced Pendulum")
         .with_x_label("t")
         .with_y_label("ω [rad/s]");
 

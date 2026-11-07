@@ -35,7 +35,7 @@ where
 fn main() {
     let function = |x: f64, u: f64|  1.0 / ((1.0 - u).powi(2) * x.powi(2) + u.powi(2));
 
-    let data_u = rk4(function, 1.0, 0.0, 0.99, 1000);
+    let data_u = rk4(function, 1.0, 0.0, 0.99999, 1000);
 
     let data_t: Vec<(f64, f64)> = data_u
         .into_iter()
@@ -48,10 +48,11 @@ fn main() {
         .with_stroke_width(2.0);
 
     let plots = vec![Plot::Line(plot)];
-    let layout = Layout::auto_from_plots(&plots)
-        .with_title("RK4 Approximation of x(t) on an Infinite Domain")
+    let mut layout = Layout::auto_from_plots(&plots)
         .with_x_label("$t$")
         .with_y_label("$x(t)$");
+
+    layout.x_range = (0.0, 100.0);
 
     let svg = SvgBackend.render_scene(&render_multiple(plots, layout));
     std::fs::write("rk4_infinite.svg", svg).unwrap();

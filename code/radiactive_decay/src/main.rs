@@ -118,7 +118,7 @@ fn main() {
     let rk4_plot = LinePlot::new()
         .with_data(data_rk4)
         .with_color("green")
-        .with_dashed()
+        .with_dashdot()
         .with_stroke_width(2.0)
         .with_legend("RK4 (25 steps)");
 

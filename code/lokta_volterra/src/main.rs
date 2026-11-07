@@ -3,6 +3,7 @@ use kuva::backend::svg::SvgBackend;
 use kuva::render::render::render_multiple;
 use kuva::render::layout::Layout;
 use kuva::render::plots::Plot;
+use kuva::plot::legend::LegendPosition;
 
 fn rk4<F>(system: F, mut r: Vec<f64>, a: f64, b: f64, n: usize,) -> (Vec<(f64, f64)>, Vec<(f64, f64)>)
 where
@@ -66,7 +67,7 @@ fn main() {
         .with_data(prey_data)
         .with_color("red")
         .with_stroke_width(2.0)
-        .with_legend("Prey");;
+        .with_legend("Prey");
 
     let predator_plot = LinePlot::new()
         .with_data(predator_data)
@@ -80,7 +81,7 @@ fn main() {
     ];
 
     let layout = Layout::auto_from_plots(&plots)
-        .with_title("Lotka–Volterra System Approximation using RK4")
+        .with_legend_position(LegendPosition::InsideTopRight)
         .with_x_label("$t$");
 
     let svg = SvgBackend.render_scene(&render_multiple(plots, layout));

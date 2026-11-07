@@ -534,29 +534,46 @@ When each method uses 10 steps, RK4 gives the most accurate result:
 ## **Infinite Ranges**
 We could use the following change of variable
 
-\\[ u = \frac{t}{1 + t} \quad\Longleftrightarrow\quad t = \frac{u}{1 - u}\\]
+$$
+u = \frac{t}{1 + t} \quad\Longleftrightarrow\quad t = \frac{u}{1 - u}
+$$
 
-when \\(t \to \infty \\) the new variable \\(u \to 1 \\)
+when $t \to \infty$ the new variable $u \to 1$
 
 Our ODE
 
-\\[ \frac{dx}{dt}  = f(x, t) \\]
+$$
+\frac{dx}{dt}  = f(t, x)
+$$
 
-Could be rewritten as
+Could be rewritten wit the chain rule as
 
-\\[ \frac{dx}{du} \frac{du}{dt}  = f(x, t) \Rightarrow \frac{dx}{du} = \frac{dt}{du} f(x, \frac{u}{1 - u}) = (1 - u)^{-2} f(x, \frac{u}{1 - u})\\]
+$$
+\frac{dx}{du} \frac{du}{dt}  = f(t, x) \Rightarrow \frac{dx}{du} = \frac{dt}{du} f(\frac{u}{1 - u}, x) = (1 - u)^{-2} f(\frac{u}{1 - u}, x)
+$$
 
 so
 
-\\[ \frac{dx}{du}  = g(x, u) \\]
+$$
+\frac{dx}{du}  = g(u, x)
+$$
 
-**Example**
+There are other changes of variables besides the one shown
+here. Good choices can make the function $g(u,x)$ simpler and
+easier to work with. Or make the solution more accurate in a
+region of interest
 
-\\[ \frac{dx}{dt}  = \frac{1}{x² + t²} \\]
+**Example: Applying RK4 Method to an ODE over infinite range**
+
+$$
+\frac{dx}{dt}  = \frac{1}{x² + t²}
+$$
 
 with the change of variable
 
-\\[ \frac{dx}{du}  = \frac{1}{(1 - u)^{2} x² + u²} = g(x, u) \\]
+$$
+\frac{dx}{du}  = \frac{1}{(1 - u)^{2} x² + u²} = g(u, x)
+$$
 
 ```rust
 # use std::time::Instant;

@@ -3,6 +3,7 @@ use kuva::backend::svg::SvgBackend;
 use kuva::render::render::render_multiple;
 use kuva::render::layout::Layout;
 use kuva::render::plots::Plot;
+use kuva::plot::legend::LegendPosition;
 
 fn rk4<F>(system: F, mut r: Vec<f64>, a: f64, b: f64, n: usize,) -> (Vec<(f64, f64)>, Vec<(f64, f64)>)
 where
@@ -41,10 +42,10 @@ where
 }
 
 fn main() {
-    let g: f64 = 9.81;
-    let l: f64 = 0.1;
+    let g: f64 = 9.81; // [m/s²]
+    let l: f64 = g; // [m]
 
-    let system = |state: &[f64], _t: f64| -> Vec<f64> {
+    let non_linear_pendulum = |state: &[f64], _t: f64| -> Vec<f64> {
         let theta = state[0]; 
         let omega = state[1]; 
 
@@ -54,31 +55,58 @@ fn main() {
         ]
     };
 
+    let linear_pendulum = |state: &[f64], _t: f64| -> Vec<f64> {
+        let theta = state[0]; 
+        let omega = state[1]; 
+
+        vec![
+            omega,
+            -(g / l) * theta
+        ]
+    };
+
     let pi = std::f64::consts::PI;
-    let (theta_data, omega_data) = rk4(system, vec![pi * 179.0/180.0, 0.0], 0.0, 10.0, 1000);
+    let (theta_data_non_linear, omega_data_non_linear) = rk4(non_linear_pendulum, vec![pi * 60.0/180.0, 0.0], 0.0, 15.0, 1000);
+    let (theta_data_linear, omega_data_linear) = rk4(linear_pendulum, vec![pi * 60.0/180.0, 0.0], 0.0, 15.0, 1000);
 
-    let theta_plot = LinePlot::new()
-        .with_data(theta_data)
-        .with_color("red")
-        .with_stroke_width(2.0);
+    let theta_plot_non_linear = LinePlot::new()
+        .with_data(theta_data_non_linear)
+        .with_dotted()
+        .with_color("orange")
+        .with_stroke_width(2.0)
+        .with_legend("Nonlinear");
 
-    let omega_plot = LinePlot::new()
-        .with_data(omega_data)
+    let omega_plot_non_linear = LinePlot::new()
+        .with_data(omega_data_non_linear)
+        .with_dotted()
+        .with_color("orange")
+        .with_stroke_width(2.0)
+        .with_legend("Nonlinear");
+
+    let theta_plot_linear = LinePlot::new()
+        .with_data(theta_data_linear)
         .with_color("steelblue")
-        .with_stroke_width(2.0);
+        .with_stroke_width(2.0)
+        .with_legend("Linear");
 
-    let theta_plots = vec![Plot::Line(theta_plot)];
+    let omega_plot_linear = LinePlot::new()
+        .with_data(omega_data_linear)
+        .with_color("steelblue")
+        .with_stroke_width(2.0)
+        .with_legend("Linear");
+
+    let theta_plots = vec![Plot::Line(theta_plot_non_linear), Plot::Line(theta_plot_linear)];
     let theta_layout = Layout::auto_from_plots(&theta_plots)
-        .with_title("Nonlinear Pendulum")
+        .with_legend_position(LegendPosition::InsideTopRight)
         .with_x_label("t")
         .with_y_label("θ [rad]");
 
     let theta_svg = SvgBackend.render_scene(&render_multiple(theta_plots, theta_layout));
     std::fs::write("theta.svg", theta_svg).unwrap();
 
-    let omega_plots = vec![Plot::Line(omega_plot)];
+    let omega_plots = vec![Plot::Line(omega_plot_non_linear), Plot::Line(omega_plot_linear)];
     let omega_layout = Layout::auto_from_plots(&omega_plots)
-        .with_title("Nonlinear Pendulum")
+        .with_legend_position(LegendPosition::InsideTopRight)
         .with_x_label("t")
         .with_y_label("ω [rad/s]");
 
